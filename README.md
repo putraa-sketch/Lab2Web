@@ -61,10 +61,105 @@ Output:<img width="1917" height="1079" alt="Screenshot 2025-09-30 140612" src="h
 ## Pertanyaan dan Tugas
 
 ### 1. Lakukan eksperimen dengan mengubah dan menambah properti dan nilai pada kode CSS dengan mengacu pada CSS Cheat Sheet yang diberikan pada file terpisah dari modul ini.
+Jawab:
+Saya melakukan eksperimen dengan menambahkan beberapa properti CSS:
+```
+h1 {
+    font-size: 32px;
+    color: darkgreen;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    border: 2px solid green;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    text-align: justify;
+    letter-spacing: 1px;
+    margin: 15px;
+}
+
+a {
+    color: #fff;
+    background-color: #007BFF;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+```
+
+Hasilnya:
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ee9c2af6-b48b-4064-bab8-c3daf4b9579c" />
+
+
 
 ### 2. Apa perbedaan pendeklarasian CSS elemen h1 {...} dengan #intro h1 {...}? berikan penjelasannya!
+Jawab:
+h1 { ... } → berlaku untuk semua elemen `<h1>` di dokumen HTML.
+#intro h1 { ... } → hanya berlaku untuk elemen `<h1>` yang ada di dalam elemen dengan atribut id="intro".
+Maka hasilnya jika di jalankan di browser “Judul Umum” biru, “Judul Intro” merah.
+
+<img width="1108" height="466" alt="image" src="https://github.com/user-attachments/assets/68ad8765-30bd-4159-91e5-9767f67a2a03" />
+
+
 
 ### 3. Apabila ada deklarasi CSS secara internal, lalu ditambahkan CSS eksternal dan inline CSS pada elemen yang sama. Deklarasi manakah yang akan ditampilkan pada browser? Berikan penjelasan dan contohnya!
 
-### 3. Pada sebuah elemen HTML terdapat ID dan Class, apabila masing-masing selector tersebut terdapat deklarasi CSS, maka deklarasi manakah yang akan ditampilkan pada browser? Berikan penjelasan dan contohnya!
-( `<p id="paragraf-1" class="text-paragraf">` )
+Prioritas CSS (CSS Specificity + urutan):
+- Inline CSS (paling kuat) ditulis langsung di atribut `style` pada elemen.
+- Internal CSS (di `<style>` dalam `<head>`).
+- Eksternal CSS (file `.css` yang dihubungkan).
+
+Contoh :
+```
+<head>
+  <!-- Eksternal CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Internal CSS -->
+  <style>
+    p { color: green; }
+  </style>
+</head>
+<body>
+  <p style="color: red;">Halo Dunia</p>
+</body>
+```
+Jika di `style.css` ada:
+```
+p { color: blue; }
+```
+
+### 4. Pada sebuah elemen HTML terdapat ID dan Class, apabila masing-masing selector tersebut
+terdapat deklarasi CSS, maka deklarasi manakah yang akan ditampilkan pada browser?
+Berikan penjelasan dan contohnya! `( <p id="paragraf-1" class="text-paragraf"> )`
+
+Aturan prioritas CSS berdasarkan specificity:
+- ID (`#id`) lebih kuat daripada
+- Class (`.class`), lebih kuat daripada
+- Selector elemen (`p`, `h1`, dll.)
+
+contoh :
+```
+<p id="paragraf-1" class="text-paragraph">Halo Dunia</p>
+```
+```
+p { color: blue; }                 /* elemen */
+.text-paragraph { color: green; }  /* class */
+#paragraf-1 { color: red; }        /* id */
+```
+
+Hasil: Teks akan berwarna merah, karena selector `#id` memiliki prioritas lebih tinggi dibanding `.class` atau elemen.
