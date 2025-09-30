@@ -32,7 +32,7 @@ Menambahkan deklarasi inline CSS pada tag `<p>`
 
 
 ### 3. Membuat CSS Eksternal
-Membuat file baru dengan nama style_eksternal.css dan kemudian membuat deklarasi CSS.
+Membuat file baru dengan nama `style_eksternal.css` dan kemudian membuat deklarasi CSS.
 
 
 <img width="710" height="824" alt="code2" src="https://github.com/user-attachments/assets/5232707e-141a-413c-9cb7-d53dd8746ee3" />
@@ -49,7 +49,7 @@ output:
 
 
 ### 4. Menambahkan CSS Selector
-menggunakan ID dan Class selector pada file style_eksternal.css
+menggunakan ID dan Class selector pada file `style_eksternal.css`
 
 
 Input:
