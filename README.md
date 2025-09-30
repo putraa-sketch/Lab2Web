@@ -57,3 +57,14 @@ Input:
 
 
 Output:<img width="1917" height="1079" alt="Screenshot 2025-09-30 140612" src="https://github.com/user-attachments/assets/1f74e8ac-98fc-4d1b-bac7-65600915573d" />
+
+## Pertanyaan dan Tugas
+
+### 1. Lakukan eksperimen dengan mengubah dan menambah properti dan nilai pada kode CSS dengan mengacu pada CSS Cheat Sheet yang diberikan pada file terpisah dari modul ini.
+
+### 2. Apa perbedaan pendeklarasian CSS elemen h1 {...} dengan #intro h1 {...}? berikan penjelasannya!
+
+### 3. Apabila ada deklarasi CSS secara internal, lalu ditambahkan CSS eksternal dan inline CSS pada elemen yang sama. Deklarasi manakah yang akan ditampilkan pada browser? Berikan penjelasan dan contohnya!
+
+### 3. Pada sebuah elemen HTML terdapat ID dan Class, apabila masing-masing selector tersebut terdapat deklarasi CSS, maka deklarasi manakah yang akan ditampilkan pada browser? Berikan penjelasan dan contohnya!
+( `<p id="paragraf-1" class="text-paragraf">` )
